@@ -10,12 +10,12 @@ const API_CONFIG = {
   },
   // For production (update with your EC2 public DNS when ready)
   PRODUCTION: {
-    pythonServer: 'http://localhost:5002' // Change this to EC2 DNS later
+    pythonServer: 'http://44.204.191.29:5003' // Using your EC2 IP and port 5003
   }
 };
 
-// Use local config for now
-const API = API_CONFIG.LOCAL;
+// Use production config
+const API = API_CONFIG.PRODUCTION;
 
 const ReportIncident = () => {
   const [location, setLocation] = useState('Fetching location...');
@@ -32,7 +32,7 @@ const ReportIncident = () => {
         (position) => {
           setLocation(`${position.coords.latitude}, ${position.coords.longitude}`);
         },
-        () => {
+        (error) => {
           setLocation('Location access denied');
         }
       );

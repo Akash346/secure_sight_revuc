@@ -8,6 +8,21 @@ interface Message {
   timestamp: string;
 }
 
+// Add this API configuration at the top of your component
+const API_CONFIG = {
+  // For local development
+  LOCAL: {
+    nodeServer: 'http://localhost:5001'
+  },
+  // For production
+  PRODUCTION: {
+    nodeServer: 'http://44.204.191.29:5001'  // Your EC2 instance IP
+  }
+};
+
+// Use production config
+const API = API_CONFIG.PRODUCTION;
+
 const ChatBot: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -27,10 +42,12 @@ const ChatBot: React.FC = () => {
     return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
-  // New function to directly call our server API
+  // Then update the sendMessage function to use this configuration
   const sendMessage = async (message: string): Promise<string> => {
     try {
-      const response = await fetch('http://localhost:5001/api/chat', {
+      console.log(`Sending to Node.js server: ${API.nodeServer}/api/chat`);
+      
+      const response = await fetch(`${API.nodeServer}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
