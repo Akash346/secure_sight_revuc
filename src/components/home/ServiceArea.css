@@ -1,0 +1,143 @@
+.services-area {
+  background: #FFFFFF !important;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle pattern overlay */
+.services-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(#4882f4 1px, transparent 1px),
+    radial-gradient(#4882f4 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.service-item {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(72, 130, 244, 0.05);
+  border: 1px solid rgba(72, 130, 244, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(72, 130, 244, 0.1);
+  border-color: rgba(72, 130, 244, 0.2);
+}
+
+/* Number indicator styling - fixed visibility */
+.service-item h5 {
+  color: #4882f4;  /* Solid color instead of gradient */
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 12px;
+  background: rgba(72, 130, 244, 0.1);
+  border: 2px solid rgba(72, 130, 244, 0.2);
+}
+
+.service-item h4 {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Underline effect for titles */
+.service-item h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #4882f4, #9a80f7);
+  transition: width 0.3s ease;
+}
+
+.service-item:hover h4::after {
+  width: 100px;
+}
+
+.service-item p {
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Arrow icon styling */
+.service-item i {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+  background: linear-gradient(135deg, #4882f4, #9a80f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover i {
+  transform: translate(5px, -5px) rotate(45deg);
+}
+
+/* Add interactive glow effect */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(72, 130, 244, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(72, 130, 244, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(72, 130, 244, 0.2); }
+}
+
+.service-item:hover {
+  animation: glow 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-item {
+    padding: 30px;
+  }
+  
+  .service-item h4 {
+    font-size: 1.5rem;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+  }
+}
+
+/* Apply the same styles to ContactArea and ModelTestArea */
+.contact-form-area, .model-test-area {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(72, 130, 244, 0.05);
+  border: 1px solid rgba(72, 130, 244, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-form-area:hover, .model-test-area:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(72, 130, 244, 0.1);
+  border-color: rgba(72, 130, 244, 0.2);
+} 

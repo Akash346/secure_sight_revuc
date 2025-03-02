@@ -1,0 +1,104 @@
+/* This CSS is already being used by ContactArea.tsx through shared classes */
+.contact-area {
+  background: #FFFFFF !important;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-area {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(72, 130, 244, 0.05);
+  border: 1px solid rgba(72, 130, 244, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-form-area:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(72, 130, 244, 0.1);
+  border-color: rgba(72, 130, 244, 0.2);
+}
+
+.contact-content-part {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(72, 130, 244, 0.05);
+  border: 1px solid rgba(72, 130, 244, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-content-part:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(72, 130, 244, 0.1);
+  border-color: rgba(72, 130, 244, 0.2);
+}
+
+.single-contact {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(72, 130, 244, 0.1);
+  transition: all 0.3s ease;
+}
+
+.single-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(72, 130, 244, 0.05);
+  border-color: rgba(72, 130, 244, 0.2);
+}
+
+.circle-btn {
+  color: #4882f4;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 12px;
+  background: rgba(72, 130, 244, 0.1);
+  border: 2px solid rgba(72, 130, 244, 0.2);
+}
+
+/* Form elements styling */
+.form-control {
+  border: 1px solid rgba(72, 130, 244, 0.2);
+  border-radius: 10px;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #4882f4;
+  box-shadow: 0 0 0 3px rgba(72, 130, 244, 0.1);
+}
+
+.theme-btn {
+  background: #4882f4;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: #3a6cd4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(72, 130, 244, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-form-area,
+  .contact-content-part {
+    padding: 30px;
+  }
+  
+  .single-contact {
+    padding: 15px;
+  }
+}

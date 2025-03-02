@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.brand-area {
+  /* background: linear-gradient(to bottom, #213a4c, #2f363c); */
+  /* background-color: #213a4c; */
+  background-color: #001c1e;
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  min-height: auto;
+}
+
+/* Add the stars background effect similar to hero section */
+.brand-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #4F4F4F, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #4F4F4F, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #4F4F4F, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #4F4F4F, rgba(0,0,0,0));
+  background-size: 200px 200px;
+  animation: stars 4s linear infinite;
+  opacity: 0.15;
+}
+
+.brand-title {
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    rgb(72, 130, 244),
+    rgb(154, 128, 247),
+    rgb(247, 247, 247),
+    rgb(72, 130, 244)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 3s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+
+/* Adding the underline style */
+.brand-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff3333;
+  border-radius: 1.5px;
+}
+
+.brand-list-container {
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  height: auto;
+}
+
+/* Add fade masks on the sides */
+.brand-list-container::before,
+.brand-list-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.brand-list-container::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #001c1e 0%,
+    rgba(0, 28, 30, 0) 100%
+  );
+}
+
+.brand-list-container::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    #001c1e 0%,
+    rgba(0, 28, 30, 0) 100%
+  );
+}
+
+.brand-list {
+  display: flex;
+  gap: 30px;
+  animation: scroll 30s linear infinite;
+  white-space: nowrap;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.brand-item {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 15px;
+  background: linear-gradient(
+    to right,
+    rgb(72, 130, 244),
+    rgb(154, 128, 247)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  flex-shrink: 0;
+  text-transform: none; /* Ensures text isn't capitalized */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .brand-area {
+    padding: 30px 0;
+  }
+
+  .brand-title {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .brand-list {
+    gap: 25px;
+  }
+
+  .brand-item {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-area {
+    padding: 25px 0;
+  }
+  
+  .brand-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .brand-title::after {
+    height: 2px;
+    bottom: -6px;
+  }
+
+  .brand-item {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .brand-list-container::before,
+  .brand-list-container::after {
+    width: 50px; /* Smaller fade area on mobile */
+  }
+
+  .brand-list-container {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-area {
+    padding: 20px 0;
+  }
+  
+  .brand-list {
+    animation: scroll 20s linear infinite; /* Slower scroll on mobile */
+  }
+
+  .brand-item {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  .brand-list-container {
+    padding: 12px 0;
+  }
+}
+
+/* Add new styles for better mobile display */
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 1.3rem;
+  }
+
+  .brand-list {
+    gap: 20px;
+  }
+
+  .brand-list-container {
+    padding: 8px 0;
+  }
+}
+
+@keyframes stars {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-200px); }
+}
+
+/* Pause animation when user hovers */
+.scroller[data-animated="true"]:hover .scroller__inner {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroller[data-animated="true"] .scroller__inner {
+    animation-play-state: paused;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-item {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .tech-item h3 {
+    font-size: 1rem;
+  }
+} 

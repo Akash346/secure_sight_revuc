@@ -1,0 +1,237 @@
+.smoke-detection-container {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 28, 30, 0.4), rgba(0, 36, 40, 0.5));
+  min-height: 100vh;
+  color: white;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+/* Enhanced Smoke Overlay Effect */
+.smoke-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/assets/images/Rev/Smoke.gif') center/cover;
+  opacity: 0.12;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+  animation: smokeFloat 20s infinite alternate;
+}
+
+.smoke-detection-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, 
+    rgba(255, 87, 34, 0.05) 0%,
+    rgba(0, 28, 30, 0.2) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.feature-content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.feature-container-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.feature-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  text-shadow: 0 2px 15px rgba(255, 87, 34, 0.3);
+  position: relative;
+  animation: glowText 2s infinite alternate;
+}
+
+.feature-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    rgba(255, 87, 34, 0.2),
+    rgba(255, 87, 34, 0.8),
+    rgba(255, 87, 34, 0.2)
+  );
+  border-radius: 2px;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  font-size: 1.5rem;
+  color: #ffffff;
+  border: none;
+}
+
+.placeholder-text {
+  padding: 20px;
+  background: rgba(255, 87, 34, 0.15);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 87, 34, 0.25);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-description {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.feature-description h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FF5722;
+  text-shadow: 0 0 15px rgba(255, 87, 34, 0.3);
+}
+
+.feature-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.feature-highlights ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-highlights li {
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.feature-highlights li span {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.feature-highlights li:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes smokeFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(-2%, -2%) scale(1.05);
+    opacity: 0.12;
+  }
+  100% {
+    transform: translate(2%, 2%) scale(1);
+    opacity: 0.15;
+  }
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .smoke-detection-container {
+    padding: 40px 15px;
+  }
+
+  .feature-title {
+    font-size: 2.2rem;
+  }
+
+  .feature-description h3 {
+    font-size: 1.8rem;
+  }
+
+  .feature-highlights ul {
+    grid-template-columns: 1fr;
+  }
+
+  .smoke-overlay {
+    opacity: 0.1;
+  }
+} 

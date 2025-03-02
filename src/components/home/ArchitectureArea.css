@@ -1,0 +1,151 @@
+.architecture-area {
+  position: relative;
+  background-color: #001c1e;
+  padding: 60px 0 30px;
+  overflow: hidden;
+  margin-top: -2px;
+}
+
+.architecture-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.architecture-pre-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-left: 80px;
+  padding-left: 20px;
+  background: linear-gradient(
+    to right,
+    rgb(72, 130, 244),
+    rgb(154, 128, 247),
+    rgb(247, 247, 247),
+    rgb(72, 130, 244)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 3s linear infinite;
+  position: relative;
+  display: inline-block;
+}
+
+.architecture-pre-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff3333;
+  border-radius: 1.5px;
+}
+
+.architecture-image-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.architecture-placeholder {
+  width: 100%;
+  height: 500px;
+  background: rgba(0, 28, 30, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.architecture-placeholder i {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.architecture-placeholder p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .architecture-pre-title {
+    font-size: 1.8rem;
+    margin-left: 60px;
+  }
+
+  .architecture-image-container {
+    padding: 15px;
+  }
+
+  .architecture-placeholder {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .architecture-area {
+    padding: 40px 0 20px;
+  }
+
+  .architecture-pre-title {
+    font-size: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .architecture-image-container {
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  .architecture-placeholder {
+    height: 300px;
+  }
+
+  .architecture-placeholder i {
+    font-size: 36px;
+  }
+
+  .architecture-placeholder p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .architecture-area {
+    padding: 30px 0 15px;
+  }
+
+  .architecture-pre-title {
+    font-size: 1.3rem;
+  }
+
+  .architecture-placeholder {
+    height: 250px;
+  }
+} 

@@ -1,0 +1,253 @@
+.report-incident-container {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.report-incident-container-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature-content-image {
+  border-radius: 6px;
+  width: 40%;
+  height: 80%;
+}
+
+.form-content {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.feature-title {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #34495e;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.media-upload-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn, 
+.capture-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover, 
+.capture-btn:hover {
+  background-color: #2980b9;
+}
+
+.upload-btn-wrapper input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e9f7fe;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.file-item i {
+  color: #3498db;
+}
+
+.submit-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #c0392b;
+}
+
+.submit-button:disabled {
+  background-color: #e57373;
+  cursor: not-allowed;
+}
+
+.feature-content-image {
+  flex: 1;
+  max-width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  height: auto;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .report-incident-container-inner {
+    flex-direction: column;
+  }
+
+  .feature-content-image {
+    max-width: 100%;
+    margin-top: 30px;
+    order: -1;
+  }
+  }
+
+.image-preview {
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  }
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.button-group {
+  display: flex;
+    flex-direction: column;
+  gap: 15px;
+}
+
+.alert-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #6c757d;
+  }
+
+.alert-note i {
+  color: #17a2b8;
+}
+
+select {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: white;
+  }
+
+select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+} 
