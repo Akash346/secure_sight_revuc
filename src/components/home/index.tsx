@@ -1,7 +1,6 @@
 import HeroArea from './HeroArea'
 import BrandArea from './BrandArea'
 import AboutArea from './AboutArea'
-import ServiceArea from './ServiceArea' 
 // import PortfolioArea from './PortfolioArea'
 // import TestimonoalArea from './TestimonoalArea'
 // import BlogArea from './BlogArea'
@@ -14,9 +13,7 @@ import ScrollTop from '../common/ScrollTop'
 import CustomCursor from '../common/CustomCursor'
 import ScrollToTop from '../common/ScrollToTop'
 import NavigationBoxes from './NavigationBoxes'
-import WorkflowSection from './WorkflowSection'
 import ArchitectureArea from './ArchitectureArea'
-import ProjectsArea from './ProjectsArea'
 
 
 export default function Home() {

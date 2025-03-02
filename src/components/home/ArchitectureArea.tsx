@@ -1,4 +1,3 @@
-import React from 'react';
 import './ArchitectureArea.css';
 
 const ArchitectureArea = () => {

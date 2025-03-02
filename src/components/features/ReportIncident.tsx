@@ -32,7 +32,7 @@ const ReportIncident = () => {
         (position) => {
           setLocation(`${position.coords.latitude}, ${position.coords.longitude}`);
         },
-        (error) => {
+        () => {
           setLocation('Location access denied');
         }
       );
