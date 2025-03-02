@@ -6,7 +6,7 @@ import HeaderOne from '../../layouts/headers/HeaderOne';
 const API_CONFIG = {
   // For local development
   LOCAL: {
-    pythonServer: 'http://localhost:5002'
+    pythonServer: 'http://44.204.191.29:5003'
   },
   // For production (update with your EC2 public DNS when ready)
   PRODUCTION: {

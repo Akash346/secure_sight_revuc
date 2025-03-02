@@ -12,7 +12,7 @@ interface Message {
 const API_CONFIG = {
   // For local development
   LOCAL: {
-    nodeServer: 'http://localhost:5001'
+    nodeServer: 'http://44.204.191.29:5001'
   },
   // For production
   PRODUCTION: {
